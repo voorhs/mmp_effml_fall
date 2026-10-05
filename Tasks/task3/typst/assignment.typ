@@ -171,7 +171,7 @@ $M$ пробегает отрезок $\[ 8 \, 32 \]$. Меньше $Q = 8$ он
 
 == 2. Каркас
 <2-каркас>
-Каркас --- пакет `linattn.homework` из публичного репозитория #link("https://github.com/voorhs/linear-attention-public/tree/v0.2.0/src/linattn/homework")[linear-attention-public];. Он содержит всё, кроме кода аппроксимации, и править его не нужно.
+Каркас --- пакет `linattn.homework` из публичного репозитория #link("https://github.com/voorhs/linear-attention-public/tree/v0.2.1/src/linattn/homework")[linear-attention-public];. Он содержит всё, кроме кода аппроксимации, и править его не нужно.
 
 - #strong[Данные] (`data.py`) синтетические и генерируются заново для каждого запуска: 32 768 обучающих последовательностей и 2 048 отложенных из независимого потока случайных чисел. Обучающая выборка конечна, поэтому точность на обучающей и на отложенной выборках может различаться.
 
@@ -200,7 +200,8 @@ $M$ пробегает отрезок $\[ 8 \, 32 \]$. Меньше $Q = 8$ он
 + Затем часть 2, одно расширение и отчёт.
 
 ```bash
-pip install "linattn[plot] @ git+https://github.com/voorhs/linear-attention-public@v0.2.0"
+pip install --upgrade \
+  "linattn[plot] @ git+https://github.com/voorhs/linear-attention-public@v0.2.1"
 python -m linattn.homework.cli assign --student ivanov                       # правило и seed
 python -m linattn.homework.cli gate                                          # контроль, 2 запуска
 python -m linattn.homework.cli time-run --arm linear --n-pairs 16 --d-k 12   # секунд на запуск
